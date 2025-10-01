@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 120px;
+  border-radius: 50%;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+h2 {
+  color: #a2007c; /* pink-violet shade like your CV */
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.skills li {
+  background: #f5e6f0;
+  margin: 4px 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 20px;
+  color: #666;
+}
