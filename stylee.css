@@ -1,47 +1,119 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
-  background: #fafafa;
+  background: linear-gradient(180deg, #ffe6f2 0%, #fff 100%);
   color: #333;
 }
 
+/* Main container (white card) */
 .container {
-  width: 80%;
+  width: 85%;
   max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(255, 102, 153, 0.15);
 }
 
+/* --- Header --- */
 header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .profile-pic {
-  width: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffb6c1; /* soft pink ring */
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
 }
 
 h1 {
-  margin: 10px 0;
+  margin: 15px 0 5px;
+  color: #d63384; /* deep pink */
+  font-size: 26px;
 }
 
+p {
+  color: #666;
+  font-size: 15px;
+}
+
+/* --- Section Titles --- */
 h2 {
-  color: #a2007c; /* pink-violet shade like your CV */
-  border-bottom: 2px solid #eee;
-  padding-bottom: 5px;
+  color: #d63384;
+  border-bottom: 3px solid #ffb6c1;
+  padding-bottom: 6px;
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
+/* --- Section spacing --- */
 section {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+/* --- Lists --- */
+ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  line-height: 1.6;
+}
+
+/* --- Skills section --- */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .skills li {
-  background: #f5e6f0;
-  margin: 4px 0;
-  padding: 5px 10px;
-  border-radius: 5px;
+  background: #ffe0ec;
+  color: #d63384;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(255, 182, 193, 0.3);
+  list-style: none;
+  transition: all 0.3s ease;
 }
 
+.skills li:hover {
+  background: #ffb6c1;
+  color: white;
+}
+
+/* --- Contact links --- */
+a {
+  color: #d63384;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px;
+  }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
