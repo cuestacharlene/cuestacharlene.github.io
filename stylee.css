@@ -1,98 +1,133 @@
 body {
   font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
-  background: linear-gradient(180deg, #ffe6f2 0%, #fff 100%);
+  padding: 0;
+  background: linear-gradient(135deg, #ffe6f2, #fff5fa);
   color: #333;
 }
 
-/* Main container (white card) */
+/* ====== MAIN CONTAINER ====== */
 .container {
-  width: 85%;
+  width: 80%;
   max-width: 900px;
   margin: 50px auto;
-  padding: 40px;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 8px 24px rgba(255, 102, 153, 0.15);
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-/* --- Header --- */
+.container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(255, 105, 180, 0.3);
+}
+
+/* ====== HEADER ====== */
 header {
   text-align: center;
-  margin-bottom: 30px;
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+  color: #fff;
+  padding: 50px 20px 70px;
+  position: relative;
 }
 
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  border-top-left-radius: 50% 25%;
+  border-top-right-radius: 50% 25%;
+}
+
+/* ====== PROFILE PICTURE ====== */
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
+  border: 6px solid #fff;
   object-fit: cover;
-  border: 5px solid #ffb6c1; /* soft pink ring */
-  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
   margin: 15px 0 5px;
-  color: #d63384; /* deep pink */
-  font-size: 26px;
+  font-size: 28px;
+  font-weight: 700;
 }
 
-p {
-  color: #666;
-  font-size: 15px;
+header p {
+  margin: 4px 0;
+  font-size: 14px;
 }
 
-/* --- Section Titles --- */
+/* ====== SECTION ====== */
+section {
+  padding: 30px 40px;
+  border-bottom: 1px solid #ffe0ec;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+/* ====== SECTION HEADINGS ====== */
 h2 {
   color: #d63384;
-  border-bottom: 3px solid #ffb6c1;
-  padding-bottom: 6px;
   font-size: 20px;
-  margin-top: 25px;
   margin-bottom: 15px;
-  font-weight: 600;
+  position: relative;
 }
 
-/* --- Section spacing --- */
-section {
-  margin-bottom: 25px;
+h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #ff69b4;
+  margin-top: 5px;
+  border-radius: 3px;
 }
 
-/* --- Lists --- */
+/* ====== LISTS ====== */
 ul {
-  list-style-type: disc;
-  margin-left: 25px;
+  margin: 0;
+  padding-left: 25px;
   line-height: 1.6;
 }
 
-/* --- Skills section --- */
+/* ====== SKILLS ====== */
 .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 10px;
+  padding-left: 0;
 }
 
 .skills li {
+  list-style: none;
   background: #ffe0ec;
   color: #d63384;
-  padding: 8px 14px;
-  border-radius: 20px;
+  padding: 8px 15px;
+  border-radius: 25px;
   font-size: 14px;
   font-weight: 500;
-  box-shadow: 0 2px 5px rgba(255, 182, 193, 0.3);
-  list-style: none;
+  box-shadow: 0 3px 8px rgba(255, 182, 193, 0.3);
   transition: all 0.3s ease;
 }
 
 .skills li:hover {
   background: #ffb6c1;
-  color: white;
+  color: #fff;
 }
 
-/* --- Contact links --- */
+/* ====== LINKS ====== */
 a {
-  color: #d63384;
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
@@ -101,18 +136,25 @@ a:hover {
   text-decoration: underline;
 }
 
-/* --- Responsive adjustments --- */
+/* ====== RESPONSIVE DESIGN ====== */
 @media (max-width: 600px) {
   .container {
-    padding: 25px;
+    width: 90%;
+    margin: 20px auto;
   }
-  .profile-pic {
-    width: 100px;
-    height: 100px;
+
+  header {
+    padding: 40px 15px 60px;
   }
+
+  section {
+    padding: 20px;
+  }
+
   h1 {
     font-size: 22px;
   }
+
   h2 {
     font-size: 18px;
   }
